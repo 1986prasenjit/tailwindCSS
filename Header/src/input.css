@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Button hover fill effect */
+  .btn-animated {
+    box-shadow: inset 0 0 0 0 #180161;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn-animated:hover {
+    box-shadow: inset 200px 0 0 0 #267ee3;
+  }
+
+  /* Nav underline animation */
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(25, 178, 234);
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .nav-link:hover::before {
+    width: 100%;
+  }
+  .bg-nav-gradient {
+    background: linear-gradient(74deg, #773FFB 0%, #51C1E8 100%);
+  }
+}

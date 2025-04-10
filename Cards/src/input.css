@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .card-hover-transition {
+      transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  
+    .card-hover-content {
+      transform: translateY(calc(100% - 4.5rem));
+    }
+  
+    .card-hover:hover .card-hover-content {
+      transform: translateY(0);
+    }
+  
+    .fade-in {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  
+    .card-hover:hover .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 100ms;
+    }
+  }
